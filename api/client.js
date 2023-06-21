@@ -152,7 +152,7 @@ async function sendInternalEmail(accessToken, formData) {
         },
       ],
     },
-    saveToSentItems: true,
+    saveToSentItems: false,
   };
 
   try {
