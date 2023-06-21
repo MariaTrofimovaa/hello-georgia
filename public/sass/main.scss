@@ -51,35 +51,37 @@ body {
   .popup_menu-gratitude {
     display: none;
     vertical-align: middle;
-    position: fixed;
-    top: 10%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: calc(100vh - 50px);
     margin: 0 auto;
     max-width: 590px;
     width: 90%;
     z-index: 25;
-    // height: 685px;
-    // height: 100%;
     box-sizing: border-box;
     background-color: $popup-bg-color;
     color: $primary-text-color;
     padding: 73px 30px 77px;
-    overflow: auto;
 
     .popup_logo {
-      margin: 0 auto 48px;
-      width: 315px;
-      height: 43px;
+      display: flex;
+      justify-content: center;
+      img {
+        margin: 0 auto 48px;
+        width: 315px;
+        height: 43px;
+      }
     }
 
     .popup-title {
       font-family: "Nunito-ExtraBold", sans-serif;
-      // font-style: normal;
-      // font-weight: 800;
       text-align: center;
       font-size: 24px;
       line-height: 140%;
       letter-spacing: 0.035em;
-      // margin-bottom: 56px;
       max-width: 344px;
       margin: 0 auto 56px;
     }
@@ -131,7 +133,6 @@ body {
 
       input {
         width: 100%;
-        // max-width: 250px;
         height: 50px;
         color: $popup-color;
         border: 1px solid $popup-color;
@@ -146,7 +147,6 @@ body {
         max-width: 250px;
         height: 50px;
         margin-top: 25.58px;
-        // margin-bottom: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,7 +175,6 @@ body {
         color: $primary-text-color;
         opacity: 0.5;
         position: absolute;
-        // top: 100%;
         right: 5%;
         margin-top: 10px;
 
@@ -346,7 +345,6 @@ body {
               font-family: "Nunito-ExtraBold", sans-serif;
               font-size: 34px;
               line-height: 140%;
-              // color: $primary-text-color;
               letter-spacing: 0.035em;
               text-transform: uppercase;
             }
@@ -379,7 +377,7 @@ body {
                 border-radius: 314px;
                 color: $accent-color;
                 font-style: normal;
-                font-size: 13px;
+                font-size: 12px;
                 line-height: 15px;
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
@@ -628,9 +626,6 @@ body {
               .brand-info {
                 &-about {
                   max-width: 735px;
-                  &-text {
-                    // max-width: 350px;
-                  }
                 }
               }
 
@@ -659,12 +654,6 @@ body {
       .content-container {
         .main-info {
           .container {
-            // .about {
-            //   // &-title {
-            //   //   // font-size: 23px;
-            //   // }
-            // }
-
             .hero-section {
               .brand-info {
                 display: flex;
@@ -804,8 +793,11 @@ body {
       padding: 45px 19px 45px 21px;
 
       .popup_logo {
-        width: 198px;
-        height: 27px;
+        margin: 0 auto 48px;
+        img {
+          width: 198px;
+          height: 27px;
+        }
       }
 
       .popup-title {
@@ -905,10 +897,6 @@ body {
 
         header {
           .container {
-            .logo {
-              width: 107px;
-              height: 23px;
-            }
             .lang_block {
               ul {
                 margin-right: 12px;
@@ -945,6 +933,23 @@ body {
                   column-gap: 18px;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .main {
+      .content-container {
+        padding: 0 18px 0 17px;
+
+        header {
+          .container {
+            .logo {
+              width: 107px;
+              height: 23px;
             }
           }
         }
