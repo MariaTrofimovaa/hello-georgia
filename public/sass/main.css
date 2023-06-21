@@ -172,8 +172,12 @@ body .popup_menu,
 body .popup_menu-gratitude {
   display: none;
   vertical-align: middle;
-  position: fixed;
-  top: 10%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  max-height: calc(100vh - 50px);
   margin: 0 auto;
   max-width: 590px;
   width: 90%;
@@ -182,10 +186,14 @@ body .popup_menu-gratitude {
   background-color: #141414;
   color: #ededed;
   padding: 73px 30px 77px;
-  overflow: auto;
 }
 body .popup_menu .popup_logo,
 body .popup_menu-gratitude .popup_logo {
+  display: flex;
+  justify-content: center;
+}
+body .popup_menu .popup_logo img,
+body .popup_menu-gratitude .popup_logo img {
   margin: 0 auto 48px;
   width: 315px;
   height: 43px;
@@ -473,7 +481,7 @@ body .main .content-container .main-info .container .hero-section .brand-info .p
   border-radius: 314px;
   color: #fec600;
   font-style: normal;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -757,6 +765,10 @@ body .popup_menu-gratitude {
   }
   body .popup_menu .popup_logo,
 body .popup_menu-gratitude .popup_logo {
+    margin: 0 auto 48px;
+  }
+  body .popup_menu .popup_logo img,
+body .popup_menu-gratitude .popup_logo img {
     width: 198px;
     height: 27px;
   }
@@ -846,10 +858,6 @@ body .popup_menu-gratitude .private-info-text {
   body .main .content-container {
     padding: 0 18px 0 17px;
   }
-  body .main .content-container header .container .logo {
-    width: 107px;
-    height: 23px;
-  }
   body .main .content-container header .container .lang_block ul {
     margin-right: 12px;
   }
@@ -870,5 +878,14 @@ body .popup_menu-gratitude .private-info-text {
   body .main .content-container .main-info .container .hero-section .content-block .about-clients-list {
     -moz-column-gap: 18px;
          column-gap: 18px;
+  }
+}
+@media screen and (max-width: 375px) {
+  body .main .content-container {
+    padding: 0 18px 0 17px;
+  }
+  body .main .content-container header .container .logo {
+    width: 107px;
+    height: 23px;
   }
 }/*# sourceMappingURL=main.css.map */
