@@ -132,7 +132,7 @@ function handleSubmit(event, url) {
   formData["source"] = hostname;
 
   axios
-    .post("http://localhost:8080/api/v1/client", formData)
+    .post("/api/v1/client", formData)
     .then((response) => {
       console.log("Данные формы успешно отправлены на сервер");
       gratitudePopupShow();
