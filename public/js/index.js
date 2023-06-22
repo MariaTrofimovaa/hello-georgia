@@ -149,6 +149,6 @@ function changeLanguage(event, lang) {
   const hostname = window.location.hostname;
   // remove "port" for prod
   const port = window.location.port;
-  const newUrl = `http://${hostname}:${port}/${lang}`;
+  const newUrl = `https://${hostname}:${port}/${lang}`;
   window.location.href = newUrl;
 }
