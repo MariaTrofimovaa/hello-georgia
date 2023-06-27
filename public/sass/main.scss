@@ -173,6 +173,14 @@ body {
         }
       }
     }
+
+      .private-info-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 10px;
+      }
+
      .private-info-text {
         max-width: 250px;
         font-style: normal;
@@ -181,9 +189,6 @@ body {
         line-height: 147%;
         color: $primary-text-color;
         opacity: 0.5;
-        position: absolute;
-        right: 5%;
-        margin-top: 10px;
 
         a {
           text-decoration: underline;
@@ -590,6 +595,17 @@ body {
         &-title {
           font-size: 12px;
         }
+
+
+        .copy-notification {
+          display: inline-block;
+          margin-left: 5px;
+          padding: 4px 8px;
+          background-color: #f0f0f0;
+          border-radius: 4px;
+          font-size: 12px;
+          color: #555555;
+        }
       }
     }
   }
@@ -857,8 +873,9 @@ body {
         }
 
       }
-      .private-info-text {
-        left: 5%;
+
+     .private-info-wrapper {
+        justify-content: flex-start;
       }
     }
 
@@ -905,7 +922,6 @@ body {
                 .eclipse-logo {
                   width: 77px;
                   height: 34px;
-                  // margin-bottom: 62px;
                 }
               }
             }
@@ -984,12 +1000,6 @@ body {
             .hero-section {
               .brand-info {
                 &-about {
-                  // .logo-imans {
-                  //   width: 77px;
-                  //   height: 15px;
-                  //   margin-right: 50px;
-                  // }
-
                   &-text {
                     width: 220px;
                   }
