@@ -73,6 +73,15 @@ window.addEventListener("DOMContentLoaded", checkScreenWidth);
 window.addEventListener("resize", checkScreenWidth);
 
 /*
+ * Set preloader
+ */
+
+setTimeout(function () {
+  let preloader = document.querySelector(".preloader");
+  preloader.classList.add("hide");
+}, 2000);
+
+/*
  * Popup actions
  */
 
@@ -162,6 +171,10 @@ function changeLanguage(event, lang) {
   const newUrl = `https://${hostname}:${port}/${lang}`;
   window.location.href = newUrl;
 }
+
+/*
+ *  Copy email
+ */
 
 const copyEmails = document.querySelectorAll(".copy-email");
 copyEmails.forEach((element) => {
