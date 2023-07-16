@@ -49,28 +49,52 @@ document.addEventListener("DOMContentLoaded", () => {
  * Move partner block
  */
 
-function checkScreenWidth() {
-  const screenWidth = window.innerWidth;
-  const partnerDiv = document.querySelector(".partner");
-  const contentDiv = document.querySelector(".content-block");
-  const contactsInfoDiv = document.querySelector(".contacts-info");
+// function checkScreenWidth() {
+//   const screenWidth = window.innerWidth;
+//   const partnerDiv = document.querySelector(".partner");
+//   const contentDiv = document.querySelector(".content-block");
+//   const contactsInfoDiv = document.querySelector(".contacts-info");
 
-  if (screenWidth <= 850) {
-    if (partnerDiv.nextElementSibling !== contentDiv) {
-      contentDiv.parentNode.insertBefore(partnerDiv, contentDiv);
-    }
-  } else if (screenWidth === 851) {
-    if (partnerDiv.nextElementSibling !== contactsInfoDiv) {
-      contentDiv.parentNode.insertBefore(
-        partnerDiv,
-        contactsInfoDiv.nextSibling
-      );
-    }
+//   if (screenWidth <= 850) {
+//     if (partnerDiv.nextElementSibling !== contentDiv) {
+//       contentDiv.parentNode.insertBefore(partnerDiv, contentDiv);
+//     }
+//   } else if (screenWidth === 851) {
+//     if (partnerDiv.nextElementSibling !== contactsInfoDiv) {
+//       contentDiv.parentNode.insertBefore(
+//         partnerDiv,
+//         contactsInfoDiv.nextSibling
+//       );
+//     }
+//   }
+// }
+
+// window.addEventListener("DOMContentLoaded", checkScreenWidth);
+// window.addEventListener("resize", checkScreenWidth);
+
+function movePrimaryButton() {
+  const screenWidth = window.innerWidth;
+  const aboutText = document.querySelector(".about-block");
+  const primaryButton = document.querySelector(".primary-button");
+
+  if (screenWidth <= 850 && aboutText && primaryButton) {
+    // Перемещаем .primary-button после .about-text
+    aboutText.parentNode.insertBefore(primaryButton, aboutText.nextSibling);
   }
 }
 
-window.addEventListener("DOMContentLoaded", checkScreenWidth);
-window.addEventListener("resize", checkScreenWidth);
+// Вызовем функцию после полной загрузки страницы и при изменении размера окна
+window.addEventListener("DOMContentLoaded", movePrimaryButton);
+window.addEventListener("resize", movePrimaryButton);
+
+/*
+ * Set preloader
+ */
+
+setTimeout(function () {
+  let preloader = document.querySelector(".preloader");
+  preloader.classList.add("hide");
+}, 2000);
 
 /*
  * Popup actions
@@ -162,6 +186,10 @@ function changeLanguage(event, lang) {
   const newUrl = `https://${hostname}:${port}/${lang}`;
   window.location.href = newUrl;
 }
+
+/*
+ *  Copy email
+ */
 
 const copyEmails = document.querySelectorAll(".copy-email");
 copyEmails.forEach((element) => {
