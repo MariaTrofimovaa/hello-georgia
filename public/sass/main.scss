@@ -491,6 +491,34 @@ body {
               display: flex;
               flex-direction: column;
               max-width: 436px;
+
+            }
+            .primary-button {
+              display: block;
+              float: right;
+              margin-right: 195px;
+              padding: 17.5px 0 17.5px 26px;
+              width: 237px;
+              height: 50px;
+              border: 1px solid $accent-color;
+              border-radius: 314px;
+
+              &-text {
+                font-family: "Inter-Medium", sans-serif;
+                background: transparent;
+                text-decoration: none;
+                color: $accent-color;
+                font-style: normal;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+              }
+
+              &:hover {
+                cursor: pointer;
+                filter: drop-shadow(0px 0px 10px #fec600);
+              }
             }
           }
 
@@ -501,33 +529,7 @@ body {
 
             .brand-info {
               display: block;
-              .primary-button {
-                display: block;
-                float: right;
-                margin-right: 195px;
-                padding: 17.5px 0 17.5px 26px;
-                width: 237px;
-                height: 50px;
-                border: 1px solid $accent-color;
-                border-radius: 314px;
-
-                &-text {
-                  font-family: "Inter-Medium", sans-serif;
-                  background: transparent;
-                  text-decoration: none;
-                  color: $accent-color;
-                  font-style: normal;
-                  font-size: 12px;
-                  line-height: 15px;
-                  letter-spacing: 0.05em;
-                  text-transform: uppercase;
-                }
-
-                &:hover {
-                  cursor: pointer;
-                  filter: drop-shadow(0px 0px 10px #fec600);
-                }
-              }
+              
 
               .brand {
                 display: flex;
@@ -590,45 +592,127 @@ body {
               display: flex;
               justify-content: space-between;
 
+              // .about-clients {
+              //   max-width: 380px;
+              //   display: flex;
+              //   flex-direction: column;
+
+              //   &-list {
+              //     display: grid;
+              //     grid-template-columns: 190px 1fr;
+              //     column-gap: 40px;
+
+              //     img {
+              //       margin-right: 10px;
+              //     }
+              //   }
+
+              //   &-text {
+              //     display: flex;
+              //     align-items: center;
+              //     font-style: normal;
+              //     font-weight: 400;
+              //     font-size: 14px;
+              //     line-height: 140%;
+              //     color: $primary-text-color;
+              //     margin-bottom: 14px;
+              //   }
+              //   &-text:nth-last-child(-n + 2) {
+              //     margin-bottom: 0px;
+              //   }
+              // }
               .about-clients {
-                max-width: 380px;
+                max-width: 463px;
                 display: flex;
                 flex-direction: column;
 
-                &-list {
-                  display: grid;
-                  grid-template-columns: 190px 1fr;
-                  column-gap: 40px;
+                  &-list {
+                    display: grid;
+                    grid-template-columns: 215px 1fr;
+                    column-gap: 40px;
+                    margin-bottom: 35px;
 
-                  img {
-                    margin-right: 10px;
+                    .logo_imans {
+                      width: 100px;
+                      height: 20px;
+                    }
+
+                    .logo_gaming {
+                        width: 173px;
+                        height: 51.2px;
+                    }
+
+                    .logo_africa {
+                        width:168px;
+                        height:31px
+                    }
+
+                    .logo_georgia {
+                        width: 188px;
+                        height: 26px;
+                    }
+
+                    .logo_bacon {
+                        width: 163px;
+                        height: 17px;
+                    }
+
+                    .logo_puma {
+                        width: 63px;
+                        height: 15.575px;
+                    }
+
+                  p {
+                    margin-bottom: 16px;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 147%; 
+                    width: 291px;
                   }
-                }
-
-                &-text {
-                  display: flex;
-                  align-items: center;
-                  font-style: normal;
-                  font-weight: 400;
-                  font-size: 14px;
-                  line-height: 140%;
-                  color: $primary-text-color;
-                  margin-bottom: 14px;
-                }
-                &-text:nth-last-child(-n + 2) {
-                  margin-bottom: 0px;
                 }
               }
 
               .contacts-block {
                 display: flex;
-                align-items: flex-end;
+                // align-items: flex-end;
+                justify-content: space-between;
 
+                
+                
                 .contacts-info {
                   max-width: 434px;
                   display: flex;
                   flex-direction: column;
-
+                  justify-content: space-between;
+                  
+                  .primary-button {
+                  display: block;
+                  float: right;
+                  margin-right: 195px;
+                  padding: 17.5px 0 17.5px 26px;
+                  width: 237px;
+                  height: 50px;
+                  border: 1px solid $accent-color;
+                  border-radius: 314px;
+  
+                  &-text {
+                    font-family: "Inter-Medium", sans-serif;
+                    background: transparent;
+                    text-decoration: none;
+                    color: $accent-color;
+                    font-style: normal;
+                    font-size: 12px;
+                    line-height: 15px;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                  }
+  
+                  &:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0px 0px 10px #fec600);
+                  }
+                }
                   .partner {
                     max-width: 311px;
                     display: flex;
@@ -787,6 +871,49 @@ body {
                   max-width: 735px;
                 }
               }
+              .content-block {
+                .about-clients {
+                  margin-bottom: 62px;
+                  &-list {
+                     grid-template-columns: 150px 1fr;
+
+                     .logo_imans {
+                      width: 83px;
+                      height: 16.2px;
+                     }
+
+                      .logo_gaming {
+                        width: 140px;
+                        height: 41.272px;
+                      }
+
+                      .logo_africa {
+                          width: 129.966px;
+                          height: 21.22px;
+                      }
+
+                      .logo_georgia {
+                          width: 143px;
+                          height: 18.86px;
+                      }
+
+                      .logo_bacon {
+                          width: 115px;
+                          height: 11.994px;
+                      }
+
+                      .logo_puma {
+                          width: 48px;
+                          height: 12.19px;
+                      }
+
+                      p {
+                        width: 200px;
+                      }
+                  }
+                }
+              }
+              
             }
           }
         }
@@ -863,7 +990,7 @@ body {
     }
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 870px) {
     .main {
       .block_video {
         video {
@@ -873,6 +1000,16 @@ body {
       .content-container {
         .main-info {
           .container {
+
+            .about {
+              .primary-button {
+                margin: 0 auto;
+              }
+              &-block {
+                margin-bottom: 44px;
+              }
+
+            }
             .hero-section {
               margin-bottom: 62px;
               .brand-info {
@@ -900,12 +1037,12 @@ body {
               .content-block {
                 flex-direction: column;
 
-                .about-clients {
-                  margin-bottom: 62px;
-                  &-list {
-                    grid-template-columns: 200px 1fr;
-                  }
-                }
+                // .about-clients {
+                //   margin-bottom: 62px;
+                //   &-list {
+                //     grid-template-columns: 200px 1fr;
+                //   }
+                // }
               }
             }
           }
@@ -931,18 +1068,18 @@ body {
         padding: 0 75px 0 75px;
 
         .company-info {
-                display: block;
+          display: block;
 
-                .primary-title {
-                    margin-bottom: 0;
-                }
-                &-blocks {
-                    margin-bottom: 20px;
-                }
-                &-title{
-                font-size: 12px;
-                }
-            }
+          .primary-title {
+              margin-bottom: 0;
+          }
+          &-blocks {
+              margin-bottom: 20px;
+          }
+          &-title{
+          font-size: 12px;
+          }
+        }
       }
     }
   }
@@ -1117,6 +1254,7 @@ body {
               .content-block {
                 .about-clients-list {
                   column-gap: 18px;
+                  grid-template-columns: 141px 1fr;
                 }
               }
             }
